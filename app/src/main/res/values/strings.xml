@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Github Users</string>
+    <string name="et_hint_search_main_activity">Search Github Users</string>
+</resources>
