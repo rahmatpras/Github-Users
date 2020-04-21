@@ -7,6 +7,7 @@ import retrofit2.http.Query
 
 interface MainDatasource {
 
+    //get data url
     @GET("search/users")
     fun discoverUser(
         @Query("q")

@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
         val presenter =  MainPresenter(this)
 
+        //check data
         progress.visibility = View.VISIBLE
         if (TextUtils.isEmpty(etKeyword.text)) {
             progress.visibility = View.GONE
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity(), MainView {
         Toast.makeText(this@MainActivity, "" + error.message, Toast.LENGTH_LONG).show()
     }
 
+    //toast jika request gagal karena lebih daru 10 kali
     override fun showToast(response: Response<MainResponse>) {
         if (response.isSuccessful) {
             onResponse(response.body()?.items ?: emptyList())
